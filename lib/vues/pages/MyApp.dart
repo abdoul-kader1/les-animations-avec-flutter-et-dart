@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../controllers/MainController.dart';
-import '../modeles/LesPages.dart';
-import '../modeles/data.dart';
+import '../../controllers/MainController.dart';
+import '../../modeles/LesPages.dart';
+import '../../modeles/data.dart';
 
 class MyApp extends StatelessWidget {
 
@@ -14,8 +14,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Animation flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.red,
       ),
+      darkTheme: ThemeData.dark(useMaterial3: true),
       home: MainController(lesPages:lesPages),
     );
   }

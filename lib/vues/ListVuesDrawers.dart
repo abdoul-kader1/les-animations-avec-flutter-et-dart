@@ -3,11 +3,11 @@ import 'package:provider/provider.dart';
 import '../modeles/LesPages.dart';
 import '../providers/IndexMenu.dart';
 
-class ListVues extends StatelessWidget{
+class ListVuesDrawers extends StatelessWidget{
 
-  List<LesPages>lesPages;
+  final List<LesPages>lesPages;
 
-  ListVues({required this.lesPages});
+  const ListVuesDrawers({super.key, required this.lesPages});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class ListVues extends StatelessWidget{
 
   Widget divider(int index){
     if(index!=0){
-      return Divider();
+      return const Divider();
     }else{
       return Container();
     }
@@ -36,7 +36,7 @@ class ListVues extends StatelessWidget{
         child: DrawerHeader(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
+            children: const [
               CircleAvatar(radius:40,backgroundImage:AssetImage("lib/images/logo_flutter.jpg")),
               Text("Les animations avec flutter")
             ],
@@ -51,7 +51,7 @@ class ListVues extends StatelessWidget{
         leading: lesIcons[nouveauIndex],
         onTap: (){
           Navigator.pop(context);
-          context.read<IndexMenu>().ChangeindexMenu(nouveauIndex);
+          context.read<IndexMenu>().changeIndexMenu(nouveauIndex);
         },
       );
     }
