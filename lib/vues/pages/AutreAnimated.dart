@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../controllers/AutreAnimationController.dart';
+import '../../modeles/LesPages.dart';
+import '../../modeles/data.dart';
 
 class AutreAnimated extends StatelessWidget{
 
@@ -6,9 +9,8 @@ class AutreAnimated extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child:Text("Bienvenu dans le cours les autres animations"),
-    );
+    List<LesPages>lesPages = Data().lesPagesDesAutresAnimations();
+    return AutreAnimationController(lesPages:lesPages);
   }
 
 }
