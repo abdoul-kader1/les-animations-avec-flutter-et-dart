@@ -3,6 +3,7 @@ import 'package:animations_flutter/providers/animated_container/ChangeProprieter
 import 'package:animations_flutter/providers/animated_cross_fade/AnimatedCrossFade.dart';
 import 'package:animations_flutter/providers/animated_default_text_style/LeAnimatedDefaultTextStyle.dart';
 import 'package:animations_flutter/providers/animated_opacity/ChangeOpacite.dart';
+import 'package:animations_flutter/providers/animated_positioned/AnimatedPositionned.dart';
 import 'package:animations_flutter/providers/animated_size/AnimatedSize.dart';
 import 'package:animations_flutter/vues/pages/MyApp.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ void main() {
           ChangeNotifierProvider(create: (_)=>LeAnimatedCrossFades()),
           ChangeNotifierProvider(create: (_)=>LeAnimatedDefaultTextStyle()),
           ChangeNotifierProvider(create: (_)=>LeAnimatedSize()),
+          ChangeNotifierProvider(create: (_)=>AnimatedPositioneds()),
         ],
         child:const MyApp(),
       )

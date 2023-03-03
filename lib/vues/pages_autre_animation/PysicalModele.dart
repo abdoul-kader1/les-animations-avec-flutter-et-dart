@@ -8,9 +8,10 @@ class PysicalModele extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Colors.redAccent,
         title: Text("Le PysicalModele"),
       ),
+      body: Center(child: Text("Bientot disponible")),
     );
   }
 
