@@ -1,6 +1,7 @@
 import 'package:animations_flutter/modeles/villeGrerk.dart';
 import 'package:flutter/material.dart';
 import '../vues/pages/AnimatedContainer.dart';
+import '../vues/pages/AnimatedList.dart';
 import '../vues/pages/AutreAnimated.dart';
 import '../vues/pages/LeHeros.dart';
 import '../vues/pages_autre_animation/FadeIn.dart';
@@ -19,7 +20,8 @@ class Data{
     return [
       LesPages(titre: "Animated container", icons:const Icon(Icons.score),trailing:const Icon(Icons.chevron_right), page: const AnimatedContainers()),
       LesPages(titre: "Les autres Animated", icons:const Icon(Icons.local_movies), trailing:const Icon(Icons.chevron_right),page: const AutreAnimated()),
-      LesPages(titre: "Le heros", icons:const Icon(Icons.flash_on),trailing:const Icon(Icons.chevron_right), page: const LeHeros())
+      LesPages(titre: "Le heros", icons:const Icon(Icons.flash_on),trailing:const Icon(Icons.chevron_right), page: const LeHeros()),
+      LesPages(titre: "Animated list", icons:const Icon(Icons.list),trailing:const Icon(Icons.chevron_right), page: const AnimatedListe())
     ];
   }
   //renvoie les pages de la section les autres animations
@@ -44,5 +46,9 @@ class Data{
       VilleGrerk(nom: "Corfou", image:"lib/images/Greek Cities/Corfou.jpg", description:"Corfou, une île au large de la côte nord-ouest de la mer Ionienne, se caractérise par ses montagnes escarpées et ses nombreuses stations balnéaires. Son patrimoine culturel témoigne d’années passées sous domination vénitienne, française et britannique, avant son rattachement à la Grèce en 1864. La ville de Corfou, dominée par deux forteresses vénitiennes imposantes, dispose de ruelles médiévales sinueuses, d’une arcade à l’architecture française et du grand palais de St. Michel et St. Georges."),
       VilleGrerk(nom: "Delphes", image:"lib/images/Greek Cities/Delphi.jpg", description:"Delphes  est le site d'un sanctuaire panhellénique, situé au pied du mont Parnasse, en Phocide, où parle l'oracle d'Apollon à travers sa prophétesse, la Pythie ; il abrite également l'Omphalos ou « nombril du monde ». Investie d'une signification sacrée, Delphes est du vie au ive siècle av. J.-C. le véritable centre et le symbole de l'unité du monde grec. La Pythie se trouve assise dans une salle du temple d’Apollon et parlait au nom du dieu. Elle répondait aux questions qui lui étaient posées en émettant des cris inarticulés, aussitôt traduits en phrases par des prêtres. Les sanctuaires panhelléniques sont des complexes architecturaux extérieurs aux cités. Ils constituent les seuls lieux où tous les anciens Grecs, et certains barbares (Lydiens et Étrusques) prennent part à des célébrations religieuses communes."),
     ];
+  }
+  //renvoue la liste des fruits pour la page animated liste controller
+  List<String>lesFruits(){
+    return ["Banane","Orange","Mangue","Pomme"];
   }
 }
