@@ -1,10 +1,10 @@
 import 'package:animations_flutter/providers/IndexMenu.dart';
-import 'package:animations_flutter/providers/animated_container/ChangeProprieterContainer.dart';
-import 'package:animations_flutter/providers/animated_cross_fade/AnimatedCrossFade.dart';
-import 'package:animations_flutter/providers/animated_default_text_style/LeAnimatedDefaultTextStyle.dart';
-import 'package:animations_flutter/providers/animated_opacity/ChangeOpacite.dart';
-import 'package:animations_flutter/providers/animated_positioned/AnimatedPositionned.dart';
-import 'package:animations_flutter/providers/animated_size/AnimatedSize.dart';
+import 'package:animations_flutter/providers/autres_animations/ChangeProprieterContainer.dart';
+import 'package:animations_flutter/providers/autres_animations/AnimatedCrossFade.dart';
+import 'package:animations_flutter/providers/autres_animations/LeAnimatedDefaultTextStyle.dart';
+import 'package:animations_flutter/providers/autres_animations/ChangeOpacite.dart';
+import 'package:animations_flutter/providers/autres_animations/AnimatedPositionned.dart';
+import 'package:animations_flutter/providers/autres_animations/AnimatedSize.dart';
 import 'package:animations_flutter/vues/pages/MyApp.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/animated_default_text_style/LeAnimatedDefaultTextStyle.dart';
+import '../../providers/autres_animations/LeAnimatedDefaultTextStyle.dart';
 
 class TexteStyle extends StatelessWidget{
 

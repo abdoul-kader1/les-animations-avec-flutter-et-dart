@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/animated_opacity/ChangeOpacite.dart';
+import '../../providers/autres_animations/ChangeOpacite.dart';
 
 class Opacite extends StatelessWidget{
 

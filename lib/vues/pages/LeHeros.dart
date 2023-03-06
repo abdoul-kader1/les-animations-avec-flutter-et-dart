@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../controllers/HerosController.dart';
+import '../../modeles/data.dart';
+import '../../modeles/villeGrerk.dart';
 
 class LeHeros extends StatelessWidget{
 
@@ -6,9 +9,8 @@ class LeHeros extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child:Text("Bienvenu dans le cours les Heros"),
-    );
+    List <VilleGrerk>lesVilles = Data().lesVillesGreck();
+    return HerosController(lesVilles:lesVilles);
   }
 
 }

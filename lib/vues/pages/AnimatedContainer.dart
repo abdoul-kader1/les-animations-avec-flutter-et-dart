@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../providers/animated_container/ChangeProprieterContainer.dart';
+import '../../providers/autres_animations/ChangeProprieterContainer.dart';
 
 class AnimatedContainers extends StatelessWidget{
 
