@@ -22,6 +22,13 @@ class RotationPositionState extends State<RotationPosition>with SingleTickerProv
     curvedAnimation = CurvedAnimation(parent: animationController, curve: Curves.linear);
     super.initState();
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaScaffold(
