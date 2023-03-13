@@ -70,6 +70,7 @@ class Data{
       LesPages(titre: "Scale", icons:const Icon(Icons.compare_arrows), trailing:const Icon(Icons.chevron_right),page: const ScaleTransitione()),
       LesPages(titre: "Size", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const SizeTransitions()),
       LesPages(titre: "Slide", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const SlideTransitions())
+
     ];
   }
 }
