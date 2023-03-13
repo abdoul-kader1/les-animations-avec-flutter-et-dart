@@ -2,6 +2,7 @@ import 'package:animations_flutter/modeles/villeGrerk.dart';
 import 'package:flutter/material.dart';
 import '../vues/page_liste_transitions/DecoratedBox.dart';
 import '../vues/page_liste_transitions/LeFade.dart';
+import '../vues/page_liste_transitions/PositionTransition.dart';
 import '../vues/pages/AnimatedContainer.dart';
 import '../vues/pages/AnimatedList.dart';
 import '../vues/pages/AutreAnimated.dart';
@@ -60,7 +61,7 @@ class Data{
     return [
       LesPages(titre: "Decorated Box", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const DecoratedBoxs()),
       LesPages(titre: "Fade", icons:const Icon(Icons.compare_arrows), trailing:const Icon(Icons.chevron_right),page: const LeFade()),
-      LesPages(titre: "Positionned", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const LeCrossFade()),
+      LesPages(titre: "Positionned", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const PositionTransition()),
       LesPages(titre: "Rotation", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const TexteStyle()),
       LesPages(titre: "Scale", icons:const Icon(Icons.compare_arrows), trailing:const Icon(Icons.chevron_right),page: const Taille()),
       LesPages(titre: "Size", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const Positionnement()),
