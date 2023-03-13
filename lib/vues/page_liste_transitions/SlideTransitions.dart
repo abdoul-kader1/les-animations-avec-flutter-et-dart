@@ -9,12 +9,46 @@ class SlideTransitions extends StatefulWidget{
   SlideTransitionsState createState()=>SlideTransitionsState();
 }
 
-class SlideTransitionsState extends State<SlideTransitions>{
+class SlideTransitionsState extends State<SlideTransitions>with SingleTickerProviderStateMixin{
+
+  late AnimationController animationController;
+  bool isAnim = false;
+  late CurvedAnimation curvedAnimation;
+  Duration duration = Duration(seconds: 2);
+
+  @override
+  void initState() {
+    animationController = AnimationController(vsync:this,duration: duration);
+    curvedAnimation = CurvedAnimation(parent: animationController, curve: Curves.linear);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaScaffold(
         titre: "rotation transition",
-        body: Center(child: Text("Bienvenu dans cette section SlideTransitions"))
+        body: Center(
+            child: InkWell(
+              onTap: (){
+                if(isAnim){
+                  animationController.reverse();
+                }else{
+                  animationController.forward();
+                }
+                isAnim = !isAnim;
+              },
+              child: SlideTransition(
+                position:  Tween<Offset>(begin: Offset(0,0),end: Offset(0,-1)).animate(curvedAnimation),
+                child: FlutterLogo(size: 200),
+              ),
+            )
+        )
     );
   }
 }
