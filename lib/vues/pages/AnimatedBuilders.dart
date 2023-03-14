@@ -17,8 +17,8 @@ class AnimatedBuildersState extends State<AnimatedBuilders>with SingleTickerProv
 
   @override
   void initState() {
-    animationController = AnimationController(vsync: this,duration: duration)..repeat();
-    animation = Tween<double>(begin: 1,end: 3).animate(CurvedAnimation(parent: animationController, curve:Curves.linear));
+    animationController = AnimationController(vsync: this,duration: duration)..repeat(reverse: true);
+    animation = Tween<double>(begin: 1,end: 3).animate(CurvedAnimation(parent: animationController, curve:Curves.elasticIn));
     super.initState();
   }
 
