@@ -7,6 +7,7 @@ import '../vues/page_liste_transitions/RotationPosition.dart';
 import '../vues/page_liste_transitions/ScaleTransition.dart';
 import '../vues/page_liste_transitions/SizeTransitions.dart';
 import '../vues/page_liste_transitions/SlideTransitions.dart';
+import '../vues/pages/AnimatedBuilders.dart';
 import '../vues/pages/AnimatedContainer.dart';
 import '../vues/pages/AnimatedList.dart';
 import '../vues/pages/AutreAnimated.dart';
@@ -31,6 +32,7 @@ class Data{
       LesPages(titre: "Le heros", icons:const Icon(Icons.flash_on),trailing:const Icon(Icons.chevron_right), page: const LeHeros()),
       LesPages(titre: "Animated list", icons:const Icon(Icons.list),trailing:const Icon(Icons.chevron_right), page: const AnimatedListe()),
       LesPages(titre: "Listes des transitions", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const Transitiions()),
+      LesPages(titre: "L'animated builder", icons:const Icon(Icons.build),trailing:const Icon(Icons.chevron_right), page: const AnimatedBuilders()),
     ];
   }
   //renvoie les pages de la section les autres animations
