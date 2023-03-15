@@ -32,7 +32,7 @@ class SlideTransitionsState extends State<SlideTransitions>with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return MaScaffold(
-        titre: "rotation transition",
+        titre: "slide transition",
         body: Center(
             child: InkWell(
               onTap: (){

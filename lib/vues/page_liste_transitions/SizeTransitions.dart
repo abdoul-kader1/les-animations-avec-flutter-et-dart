@@ -32,7 +32,7 @@ class SizeTransitionsState extends State<SizeTransitions>with SingleTickerProvid
   @override
   Widget build(BuildContext context) {
     return MaScaffold(
-        titre: "rotation transition",
+        titre: "size transition",
         body: Center(
             child: InkWell(
               onTap: (){
