@@ -15,6 +15,12 @@ class GraphiqueAnimeState extends State<GraphiqueAnime>{
   
   List<Exercice>exercices = [Exercice(week: 0),Exercice(week: 1),Exercice(week: 2),Exercice(week: 3),Exercice(week: 4)];
   int currentIndex = 0;
+  Map <String,Color>listCouleur = {
+    "Travail trés élévé":Colors.green,
+    "Travail élévé":Colors.yellow,
+    "Travail moyen":Colors.orange,
+    "Travail faible":Colors.red
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,10 @@ class GraphiqueAnimeState extends State<GraphiqueAnime>{
    return SingleChildScrollView(
      child: Column(
        children: [
-         Text("Semaine numéros : ${currentIndex+1}"),
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: Text("Semaine numéros : ${currentIndex+1}"),
+         ),
          Container(
            width: valeur,
            height: valeur,
@@ -30,31 +39,53 @@ class GraphiqueAnimeState extends State<GraphiqueAnime>{
              child: charts(valeur, exercices[currentIndex]),
            ),
          ),
-         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-           children: [
-             ElevatedButton(
-                 onPressed: (){
-                   setState(() {
-                     if(currentIndex>0)currentIndex--;
-                   });
-                 },
-                 child: Text("Précédent")
-             ),ElevatedButton(
-                 onPressed:(){
-                   setState(() {
-                     if(currentIndex<exercices.length-1)currentIndex++;
-                   });
-                 },
-                 child: Text("Suivant")
-             )
-           ],
-         )
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             children: [
+               ElevatedButton(
+                   onPressed: (){
+                     setState(() {
+                       if(currentIndex>0)currentIndex--;
+                     });
+                   },
+                   child: Text("Précédent")
+               ),ElevatedButton(
+                   onPressed:(){
+                     setState(() {
+                       if(currentIndex<exercices.length-1)currentIndex++;
+                     });
+                   },
+                   child: Text("Suivant")
+               )
+             ],
+           ),
+         ),
+         Column(children: legende())
        ],
      ),
    );
   }
 
+  List <Widget> legende(){
+    List <Widget>contenu = [];
+    Padding row;
+    listCouleur.forEach((key, value) {
+      row = Padding(
+          padding: EdgeInsets.all(15),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(key),
+            Container(width:30,height: 30,color: value),
+          ],
+        ),
+      );
+      contenu.add(row);
+    });
+    return contenu;
+  }
   Row charts(double max,Exercice exercice){
     double width = max/10;
     int? maxRuns = exercice.runs?.reduce(math.max);
