@@ -10,10 +10,17 @@ class MaTileHeros extends StatelessWidget{
 
   MaTileHeros({required this.lesVilles,required this.index});
 
+
   @override
   Widget build(BuildContext context) {
     Hero leHeros = Hero(
       tag: index,
+      flightShuttleBuilder:(context,animation,flightDirection,fromHeroContext,toHeroContext){
+        return RotationTransition(
+          turns: animation,
+          child:Image.asset(lesVilles.image,width: 100,height: 100,fit: BoxFit.cover),
+        );
+      },
       child:Image.asset(lesVilles.image,width: 100,height: 100,fit: BoxFit.cover),
     );
     return ListTile(
@@ -24,5 +31,4 @@ class MaTileHeros extends StatelessWidget{
       },
     );
   }
-
 }
