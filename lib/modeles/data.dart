@@ -21,12 +21,13 @@ import '../vues/pages_autre_animation/Positionnement.dart';
 import '../vues/pages_autre_animation/PysicalModele.dart';
 import '../vues/pages_autre_animation/Taille.dart';
 import '../vues/pages_autre_animation/TexteStyle.dart';
+import '../vues/pages/AnimationListeners.dart';
 import 'LesPages.dart';
 
 class Data{
 
   //renvoie les pages principales de l'application
-  List<LesPages>lesPages(){
+List<LesPages>lesPages(){
     return [
       LesPages(titre: "Animated container", icons:const Icon(Icons.score),trailing:const Icon(Icons.chevron_right), page: const AnimatedContainers()),
       LesPages(titre: "Les autres Animated", icons:const Icon(Icons.local_movies), trailing:const Icon(Icons.chevron_right),page: const AutreAnimated()),
@@ -35,6 +36,7 @@ class Data{
       LesPages(titre: "Listes des transitions", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const Transitiions()),
       LesPages(titre: "L'animated builder", icons:const Icon(Icons.build),trailing:const Icon(Icons.chevron_right), page: const AnimatedBuilders()),
       LesPages(titre: "Graphique animé", icons:const Icon(Icons.show_chart),trailing:const Icon(Icons.chevron_right), page: const GraphiqueAnime()),
+      LesPages(titre: "Animation listener", icons:const Icon(Icons.hearing),trailing:const Icon(Icons.chevron_right), page: const AnimationListeners()),
     ];
   }
   //renvoie les pages de la section les autres animations
