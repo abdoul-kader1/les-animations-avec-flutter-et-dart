@@ -13,6 +13,7 @@ import '../vues/pages/AnimatedList.dart';
 import '../vues/pages/AutreAnimated.dart';
 import '../vues/pages/GraphiqueAnime.dart';
 import '../vues/pages/LeHeros.dart';
+import '../vues/pages/MenuPage.dart';
 import '../vues/pages/Transitions.dart';
 import '../vues/pages_autre_animation/FadeIn.dart';
 import '../vues/pages_autre_animation/LeCrossFade.dart';
@@ -37,6 +38,7 @@ List<LesPages>lesPages(){
       LesPages(titre: "L'animated builder", icons:const Icon(Icons.build),trailing:const Icon(Icons.chevron_right), page: const AnimatedBuilders()),
       LesPages(titre: "Graphique animé", icons:const Icon(Icons.show_chart),trailing:const Icon(Icons.chevron_right), page: const GraphiqueAnime()),
       LesPages(titre: "Animation listener", icons:const Icon(Icons.hearing),trailing:const Icon(Icons.chevron_right), page: const AnimationListeners()),
+      LesPages(titre: "Menu animaé", icons:const Icon(Icons.menu),trailing:const Icon(Icons.chevron_right), page: const MenuPage()),
     ];
   }
   //renvoie les pages de la section les autres animations
