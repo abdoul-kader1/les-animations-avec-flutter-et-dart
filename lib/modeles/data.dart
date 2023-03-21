@@ -10,6 +10,7 @@ import '../vues/page_liste_transitions/SlideTransitions.dart';
 import '../vues/pages/AnimatedBuilders.dart';
 import '../vues/pages/AnimatedContainer.dart';
 import '../vues/pages/AnimatedList.dart';
+import '../vues/pages/AnimationTinder.dart';
 import '../vues/pages/AutreAnimated.dart';
 import '../vues/pages/GraphiqueAnime.dart';
 import '../vues/pages/LeHeros.dart';
@@ -39,6 +40,7 @@ List<LesPages>lesPages(){
       LesPages(titre: "Graphique animé", icons:const Icon(Icons.show_chart),trailing:const Icon(Icons.chevron_right), page: const GraphiqueAnime()),
       LesPages(titre: "Animation listener", icons:const Icon(Icons.hearing),trailing:const Icon(Icons.chevron_right), page: const AnimationListeners()),
       LesPages(titre: "Menu animaé", icons:const Icon(Icons.menu),trailing:const Icon(Icons.chevron_right), page: const MenuPage()),
+      LesPages(titre: "Animation tinder", icons:const Icon(Icons.photo_library),trailing:const Icon(Icons.chevron_right), page: const AnimationTinder()),
     ];
   }
   //renvoie les pages de la section les autres animations
@@ -80,5 +82,111 @@ List<LesPages>lesPages(){
       LesPages(titre: "Slide", icons:const Icon(Icons.compare_arrows),trailing:const Icon(Icons.chevron_right), page: const SlideTransitions())
 
     ];
+  }
+  //renvoie la liste des donnees pour l'animation tinder
+  List<Widget>donneeTinder(){
+  return [
+    //element 1
+    Padding(
+      padding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(width: 300,height: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),image: DecorationImage(colorFilter: ColorFilter.mode(Colors.black38,BlendMode.darken),image:AssetImage("lib/images/tinder/images.jpg"),fit: BoxFit.cover))),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Marie-Joseph , 22",style: TextStyle(color: Colors.white,fontSize: 25),),
+                Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
+              ],
+            )
+          )
+        ],
+      ),
+    ),
+    //element2
+    Padding(
+      padding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(width: 300,height: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),image: DecorationImage(colorFilter: ColorFilter.mode(Colors.black38,BlendMode.darken),image:AssetImage("lib/images/tinder/images (1).jpg"),fit: BoxFit.cover))),
+          Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Cherif Kader , 22",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
+                ],
+              )
+          )
+        ],
+      ),
+    ),
+    //element 3
+    Padding(
+      padding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(width: 300,height: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),image: DecorationImage(colorFilter: ColorFilter.mode(Colors.black38,BlendMode.darken),image:AssetImage("lib/images/tinder/images (2).jpg"),fit: BoxFit.cover))),
+          Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Marie-Laure , 22",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
+                ],
+              )
+          )
+        ],
+      ),
+    ),
+    //element4
+    Padding(
+      padding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(width: 300,height: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),image: DecorationImage(colorFilter: ColorFilter.mode(Colors.black38,BlendMode.darken),image:AssetImage("lib/images/tinder/images (3).jpg"),fit: BoxFit.cover))),
+          Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Fatim Samaké , 24",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
+                ],
+              )
+          )
+        ],
+      ),
+    ),
+    //element 5
+    Padding(
+      padding: EdgeInsets.all(10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(width: 300,height: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),image: DecorationImage(colorFilter: ColorFilter.mode(Colors.black38,BlendMode.darken),image:AssetImage("lib/images/tinder/images (4).jpg"),fit: BoxFit.cover))),
+          Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Fram Christ , 22",style: TextStyle(color: Colors.white,fontSize: 25),),
+                  Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
+
+                ],
+              )
+          ),
+        ],
+      ),
+    )
+  ];
   }
 }
