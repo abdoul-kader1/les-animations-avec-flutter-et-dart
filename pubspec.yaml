@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   provider: ^6.0.5
+  rive: ^0.10.3
 
 dev_dependencies:
   flutter_test:
@@ -39,4 +40,6 @@ flutter:
   - lib/images/tinder/images (2).jpg
   - lib/images/tinder/images (3).jpg
   - lib/images/tinder/images (4).jpg
+  - lib/rive/2063-4080-flutter-puzzle-hack-project.riv
+  - lib/rive/3257-6868-404.riv
 

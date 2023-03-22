@@ -39,7 +39,7 @@ List<LesPages>lesPages(){
       LesPages(titre: "L'animated builder", icons:const Icon(Icons.build),trailing:const Icon(Icons.chevron_right), page: const AnimatedBuilders()),
       LesPages(titre: "Graphique animé", icons:const Icon(Icons.show_chart),trailing:const Icon(Icons.chevron_right), page: const GraphiqueAnime()),
       LesPages(titre: "Animation listener", icons:const Icon(Icons.hearing),trailing:const Icon(Icons.chevron_right), page: const AnimationListeners()),
-      LesPages(titre: "Menu animaé", icons:const Icon(Icons.menu),trailing:const Icon(Icons.chevron_right), page: const MenuPage()),
+      LesPages(titre: "Menu animé", icons:const Icon(Icons.menu),trailing:const Icon(Icons.chevron_right), page: const MenuPage()),
       LesPages(titre: "Animation tinder", icons:const Icon(Icons.photo_library),trailing:const Icon(Icons.chevron_right), page: const AnimationTinder()),
     ];
   }
@@ -180,7 +180,6 @@ List<LesPages>lesPages(){
                 children: [
                   Text("Fram Christ , 22",style: TextStyle(color: Colors.white,fontSize: 25),),
                   Text("la description de la personne",style: TextStyle(color: Colors.white,fontSize: 16),),
-
                 ],
               )
           ),

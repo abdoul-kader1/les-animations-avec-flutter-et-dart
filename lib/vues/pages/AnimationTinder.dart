@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rive/rive.dart';
 import '../../modeles/data.dart';
 
 class AnimationTinder extends StatefulWidget{
@@ -42,58 +43,58 @@ class AnimationTinderState extends State<AnimationTinder>with SingleTickerProvid
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child:Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          AnimatedBuilder(
-            animation: animationController,
-            builder: (context,child) {
-              return stack();
-            },
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(20),
-                  shape: CircleBorder()
-                ),
-                  onPressed: (){
-                    tourner = true;
-                    verification();
-                  },
-                  child: Icon(Icons.thumb_down,color: Colors.red)
+    return SingleChildScrollView(
+      child: Center(
+        child:Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width*0.15),
+              child: AnimatedBuilder(
+                animation: animationController,
+                builder: (context,child) {
+                  return stack();
+                },
               ),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.all(20),
-                    shape: CircleBorder()
-                  ),
-                  onPressed: (){
-                    tourner = false;
-                    verification();
-                  },
-                  child:  Icon(Icons.thumb_up,color: Colors.green)
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width*0.03),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  boutton(true,Colors.red,Icons.thumb_down),
+                  boutton(false,Colors.green,Icons.thumb_up)
+                ],
               ),
-            ],
-          )
-
-        ],
-      ) ,
+            ),
+          ],
+        ) ,
+      ),
     );
   }
 
   Stack stack(){
-    print(index);
     return Stack(
       children: (lesCards.isEmpty)?[
         Padding(
           padding: EdgeInsets.all(10),
-          child: Container(width: 300,height: 400,child: Center(child:Text("Ouppss il n'ya Plus de donnée"))),
+          child: Column(
+            children: [
+              Container(width: 300, height: 400, child: Center(child:RiveAnimation.asset("lib/rive/3257-6868-404.riv"))),
+              Text("Il n'y a plus de données",style: TextStyle(fontSize: 20),)
+            ],
+          ),
         )
       ]:lesCards,
+    );
+  }
+  ElevatedButton boutton(bool tourne,Color couleur,IconData icons){
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(padding: EdgeInsets.all(20),shape: CircleBorder()),
+        onPressed: (){
+          tourner = tourne;
+          verification();
+        },
+        child:  Icon(icons,color: couleur)
     );
   }
   verification(){
@@ -105,7 +106,6 @@ class AnimationTinderState extends State<AnimationTinder>with SingleTickerProvid
       supprimerAnimation();
     }
   }
-
   creatAnimation(){
     Widget element = lesCards.last;
       lesCards[index] = SlideTransition(
@@ -115,17 +115,16 @@ class AnimationTinderState extends State<AnimationTinder>with SingleTickerProvid
           child: element,
         ),
       );
-      print(lesCards);
     animationController.forward();
   }
   supprimerAnimation(){
-      animation.addStatusListener((status) {
-        if(status==AnimationStatus.completed){
-          lesCards.removeAt(index);
+      animation.addListener(() {
+        if(animation.isCompleted){
+          setState(() {
+            lesCards.removeAt(index);
+          });
           animationController.reset();
         }
       });
-    print("les donnees $lesCards");
   }
-
 }
