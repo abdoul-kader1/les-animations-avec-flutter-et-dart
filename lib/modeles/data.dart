@@ -7,6 +7,7 @@ import '../vues/page_liste_transitions/RotationPosition.dart';
 import '../vues/page_liste_transitions/ScaleTransition.dart';
 import '../vues/page_liste_transitions/SizeTransitions.dart';
 import '../vues/page_liste_transitions/SlideTransitions.dart';
+import '../vues/pages/Acceuil.dart';
 import '../vues/pages/AnimatedBuilders.dart';
 import '../vues/pages/AnimatedContainer.dart';
 import '../vues/pages/AnimatedList.dart';
@@ -31,6 +32,7 @@ class Data{
   //renvoie les pages principales de l'application
 List<LesPages>lesPages(){
     return [
+      LesPages(titre: "Acceuil", icons:const Icon(Icons.home),trailing:const Icon(Icons.chevron_right), page: const  Acceuil()),
       LesPages(titre: "Animated container", icons:const Icon(Icons.score),trailing:const Icon(Icons.chevron_right), page: const AnimatedContainers()),
       LesPages(titre: "Les autres Animated", icons:const Icon(Icons.local_movies), trailing:const Icon(Icons.chevron_right),page: const AutreAnimated()),
       LesPages(titre: "Le heros", icons:const Icon(Icons.flash_on),trailing:const Icon(Icons.chevron_right), page: const LeHeros()),

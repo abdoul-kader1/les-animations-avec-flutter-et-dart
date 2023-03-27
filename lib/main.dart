@@ -7,9 +7,11 @@ import 'package:animations_flutter/providers/autres_animations/AnimatedPositionn
 import 'package:animations_flutter/providers/autres_animations/AnimatedSize.dart';
 import 'package:animations_flutter/vues/pages/MyApp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  //SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
       MultiProvider(
         providers: [
