@@ -8,9 +8,12 @@ import 'package:animations_flutter/providers/autres_animations/AnimatedSize.dart
 import 'package:animations_flutter/vues/pages/MyApp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main()async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
       MultiProvider(
@@ -26,4 +29,5 @@ void main() {
         child:const MyApp(),
       )
   );
+  FlutterNativeSplash.remove();
 }
